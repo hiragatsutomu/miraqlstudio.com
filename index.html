@@ -775,13 +775,10 @@
     <div class="container">
       <h2 id="contact-title" class="section-title">お問い合わせ / Contact</h2>
       <p class="lead">お仕事のご依頼・ご相談等、お気軽にお問い合わせください</p>
-      <form action="https://formsubmit.co/info@miraqlstudio.com" method="POST">
-  <!-- 遷移先（thanks.html） -->
-  <input type="hidden" name="_next" value="https://miraqlstudio.com/thanks.html">
-  <!-- スパム対策 -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="text" name="_honey" style="display:none">
-  <!-- 各項目（例文そのまま） -->
+      <form action="https://api.staticforms.xyz/submit" method="POST">
+  <input type="hidden" name="accessKey" value="sf_48lm2d52n690beehd67h5h67">
+  <input type="hidden" name="redirectTo" value="https://miraqlstudio.com/thanks.html">
+  <input type="text" name="honeypot" style="display:none">
   <label>会社名（任意）</label>
   <input type="text" name="company" placeholder="例）株式会社○○">
   <label>お名前</label>
