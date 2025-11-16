@@ -775,22 +775,23 @@
     <div class="container">
       <h2 id="contact-title" class="section-title">お問い合わせ / Contact</h2>
       <p class="lead">お仕事のご依頼・ご相談等、お気軽にお問い合わせください</p>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="_honey" action="/thanks.html">
-        <!-- Netlify Forms 用 必須 -->
-        <input type="hidden" name="form-name" value="contact">
-        <!-- ハニーポット（スパム対策） -->
-        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
-        <input type="hidden" name="_started_at" id="started_at">
-        <label>会社名（任意）</label>
-        <input type="text" name="company" placeholder="例）株式会社○○">
-        <label>お名前</label>
-        <input type="text" name="name" required placeholder="例）ミラクル イチロウ">
-        <label>メールアドレス</label>
-        <input type="email" name="email" required placeholder="例）you@example.com">
-        <label>お問い合わせ内容</label>
-        <textarea name="message" rows="6" required placeholder="ご用件をご入力ください"></textarea>
-        <button type="submit" class="btn">送信する</button>
-      </form>
+      <form action="https://formsubmit.co/info@miraqlstudio.com" method="POST">
+  <!-- 遷移先（thanks.html） -->
+  <input type="hidden" name="_next" value="https://miraqlstudio.com/thanks.html">
+  <!-- スパム対策 -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" style="display:none">
+  <!-- 各項目（例文そのまま） -->
+  <label>会社名（任意）</label>
+  <input type="text" name="company" placeholder="例）株式会社○○">
+  <label>お名前</label>
+  <input type="text" name="name" required placeholder="例）ミラクル イチロウ">
+  <label>メールアドレス</label>
+  <input type="email" name="email" required placeholder="例）you@example.com">
+  <label>お問い合わせ内容</label>
+  <textarea name="message" rows="6" required placeholder="ご用件をご入力ください"></textarea>
+  <button type="submit" class="btn">送信する</button>
+</form>
       <p class="note">※ 自動返信メールが届かない場合、迷惑メールをご確認ください<br>
 当サイトでは、ユーザーの個人情報を適切に取り扱い、第三者に提供することはありません。<br>
 本ポリシーの内容は、法令等の変更により改定されることがあります。</p>
