@@ -1,895 +1,757 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MIRAQLstudio Inc. | Make it Imagined</title>
-  <meta name="description" content="株式会社MIRAQLstudio（ミラクルスタジオ）は、ゲーム・デジタルコンテンツの企画制作・IP開発支援を行うクリエイティブスタジオ。柔軟な発想と現実的な実装力で、アイデアをスピーディに形にします。">
-  <link rel="icon" href="HP_favicon.ico">
-  <link rel="canonical" href="https://miraqlstudio.com/">
-  <meta property="og:title" content="MIRAQLstudio Inc. | ゲーム・デジタルコンテンツ企画制作">
-  <meta property="og:description" content="柔軟な発想と現実的な実装力で、アイデアをスピーディに形にします">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://miraqlstudio.com/">
-  <meta property="og:image" content="https://miraqlstudio.com/ogp.jpg">
-  <meta property="og:image:alt" content="MIRAQLstudio公式イメージ">
-  <meta name="twitter:image:alt" content="MIRAQLstudio公式イメージ">
-  <link rel="preload" href="HP_logo.webp" as="image" fetchpriority="high">
-  <meta property="og:site_name" content="MIRAQLstudio Inc.">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:site" content="@MIRAQLstudio">
-  <meta name="theme-color" content="#0280CA">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MIRAQLstudio Inc. | ゲーム・デジタルコンテンツ企画制作">
-  <meta name="twitter:description" content="柔軟な発想と現実的な実装力で、アイデアをスピーディに形にします">
-  <meta name="twitter:image" content="https://miraqlstudio.com/ogp.jpg">
-  <link rel="preconnect" href="https://formsubmit.co" crossorigin>
-  <style>
-    :root {
-      --primary: #0280CA;
-      --accent: #00C6A5;
-      --bg: #fff;
-      --bg-soft: #F5F9FB;
-      --bg-alt: #F7FAFD;
-      --text: #1A1F27;
-      --muted: #526072;
-      --border: rgba(2,6,23,.08);
-      --radius: 14px;
-      --shadow: 0 12px 28px rgba(2,6,23,.08);
-      --maxw: 1120px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, 'Noto Sans JP', Helvetica, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.65;
-    }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(var(--maxw), 92%); margin-inline: auto; }
-    .section { padding: 88px 0; }
-    .section.alt { background: var(--bg-alt); }
-    .section-title {
-      font-size: clamp(28px, 2.2vw + 8px, 36px);
-      font-weight: 800;
-      margin: 0 0 24px;
-      text-align: left;
-    }
-   .lead {
-  color: var(--muted);
-  font-size: clamp(15px, 1vw + 11px, 17px);
-  line-height: 1.6;
-  letter-spacing: .01em;
-  max-width: 620px;
-  word-break: normal;
-  overflow-wrap: anywhere;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-  line-break: strict;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIRAQLstudio Inc. | Make it Imagined</title>
+<meta name="description" content="株式会社MIRAQLstudio（ミラクルスタジオ）は、ゲーム・デジタルコンテンツの企画制作・IP開発支援を行うクリエイティブスタジオ。柔軟な発想と現実的な実装力で、アイデアをスピーディに形にします。">
+<meta property="og:title" content="MIRAQLstudio Inc. | ゲーム・デジタルコンテンツ企画制作">
+<meta property="og:description" content="柔軟な発想と現実的な実装力で、アイデアをスピーディに形にします">
+<meta property="og:image" content="https://miraqlstudio.com/ogp.jpg">
+<meta property="og:image:alt" content="MIRAQLstudio公式イメージ">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="MIRAQLstudio Inc.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://miraqlstudio.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MIRAQLstudio">
+<meta name="twitter:title" content="MIRAQLstudio Inc. | ゲーム・デジタルコンテンツ企画制作">
+<meta name="twitter:description" content="柔軟な発想と現実的な実装力で、アイデアをスピーディに形にします">
+<meta name="twitter:image" content="https://miraqlstudio.com/ogp.jpg">
+<meta name="twitter:image:alt" content="MIRAQLstudio公式イメージ">
+<meta name="theme-color" content="#0280CA">
+<link rel="canonical" href="https://miraqlstudio.com/">
+<link rel="icon" href="/favicon.ico">
+<link rel="preload" href="HP_logo_white.webp" as="image" fetchpriority="high">
+<link rel="preconnect" href="https://api.staticforms.xyz" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MIRAQLstudio Inc.",
+  "url": "https://miraqlstudio.com",
+  "logo": "https://miraqlstudio.com/HP_logo.jpg",
+  "foundingDate": "2025-09-19",
+  "founder": {
+    "@type": "Person",
+    "name": "Tsutomu Hiraga",
+    "jobTitle": "CEO / Game Producer / Content Planner"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "107-0061",
+    "addressRegion": "東京都",
+    "addressLocality": "港区",
+    "streetAddress": "北青山1-3-3 三橋ビル3階",
+    "addressCountry": "JP"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "info@miraqlstudio.com",
+    "areaServed": "JP",
+    "availableLanguage": ["ja", "en"]
+  }],
+  "sameAs": ["https://x.com/MIRAQLstudio"]
 }
-    .lead-line { display: block; white-space: nowrap; }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      white-space: nowrap;
-      border: 0;
-    }
-  </style>
-  <style>
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,.86);
-      backdrop-filter: saturate(140%) blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand strong { color: var(--primary); font-weight: 800; }
-    .nav { display: flex; align-items: center; gap: 22px; }
-    .nav a { color: var(--text); }
-    .btn.small { padding: .5rem .9rem; font-size: .9rem; }
-  </style>
-  <style>
-    .menu-toggle {
-      display: none; /* デフォルトは非表示 */
-      background: transparent;
-      border: none;
-      color: var(--text);
-      padding: 8px 12px;
-      cursor: pointer;
-      z-index: 60;
-    }
-
-    .menu-toggle-icon {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      position: relative;
-      transition: background .3s;
-    }
-
-    .menu-toggle-icon::before,
-    .menu-toggle-icon::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: var(--text);
-      transition: transform .3s;
-    }
-
-    .menu-toggle-icon::before { top: -8px; }
-    .menu-toggle-icon::after { top: 8px; }
-
-    /* メニューが開いた状態 (Xマーク) */
-    .site-header.is-open .menu-toggle-icon { background: transparent; }
-    .site-header.is-open .menu-toggle-icon::before { transform: translateY(8px) rotate(45deg); }
-    .site-header.is-open .menu-toggle-icon::after { transform: translateY(-8px) rotate(-45deg); }
-  </style>
-  <style>
-    .btn {
-      display: inline-block;
-      padding: .8rem 1.2rem;
-      border-radius: .8rem;
-      background: linear-gradient(180deg, var(--primary), #1c6fb0);
-      color: #fff;
-      border: 1px solid #1a6aa8;
-      box-shadow: var(--shadow);
-      transition: transform .08s ease, opacity .2s;
-    }
-    .btn:hover { transform: translateY(-1px); opacity: .95; }
-    .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
-    .btn.xl { font-size: 1.05rem; padding: 1rem 1.4rem; }
-    .nav .btn.small { color: #fff; }
-  </style>
-  <style>
-    :root {
-      --hero-colgap: clamp(14px, 2.8vw, 28px);
-      --logo-max: 480px;
-      --logo-min: 240px;
-      --logo-vw: 34vw;
-    }
-    .hero { padding-top: 48px; background: var(--bg); }
-    .hero-inner {
-      display: grid;
-      grid-template-columns: minmax(320px, 1fr) minmax(260px, .9fr);
-      grid-template-areas:
-        "header header"
-        "title  logo"
-        "map    logo"
-        "lead   logo";
-      column-gap: var(--hero-colgap);
-      align-items: start;
-    }
-    .hero-header { grid-area: header; }
-    .hero-title { grid-area: title; }
-    .hero h1 {
-      font-size: clamp(28px, 4.6vw, 56px);
-      line-height: 1.1;
-      margin: 0 0 12px;
-      font-weight: 800;
-      letter-spacing: .2px;
-    }
-    .hero h1 br { display: block; }
-    .hl { color: var(--primary); font-weight: inherit; }
-    .hero-map {
-      grid-area: map;
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.6;
-      list-style: none;
-      padding-left: 0;
-    }
-    .hero-map li { margin: .08rem 0; list-style: none; }
-    .hero-map li::marker { content: ""; }
-    .hero-visual { grid-area: logo; display: grid; justify-items: end; }
-    .hero-logo { align-self: start; margin-top: 0; }
-    .hero-logo img {
-      width: clamp(var(--logo-min), var(--logo-vw), var(--logo-max));
-      height: auto;
-      filter: none;
-    }
-  </style>
-  <style>
-    #strategy {
-      position: relative;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      min-height: clamp(780px, calc(100vw * 0.60), 1200px);
-      background:
-        linear-gradient(90deg, rgba(255,255,255,.38) 0%, rgba(255,255,255,.24) 48%, rgba(255,255,255,.12) 100%),
-        image-set(
-          url('HP_imageBG.webp') type('image/webp'),
-          url('HP_imageBG.jpg') type('image/jpg')
-        ) center top / cover no-repeat;
-      background-color: #fff;
-    }
-    .cards { display: grid; grid-template-columns: 1fr; gap: 18px; max-width: 640px; align-items: stretch; }
-    .card {
-      background: rgba(255,255,255,.80);
-      backdrop-filter: saturate(120%) blur(2px);
-      -webkit-backdrop-filter: saturate(120%) blur(2px);
-      box-shadow: 0 10px 28px rgba(2,6,23,.08);
-      border: 1px solid rgba(2,6,23,.06);
-      border-radius: var(--radius);
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      text-align: left;
-    }
-    .card h3 { margin: 0; }
-    .card h3.en { margin: 0 0 6px 0; line-height: 1.25; }
-    .card .en {
-      font-size: clamp(18px, 1.4vw + 10px, 22px);
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: .2px;
-    }
-    .card p { margin: 0; }
-    .card p.brfix { line-height: 1.65; }
-    .card p.brfix br { content: ""; display: block; }
-    /* Highlight brand card text in primary color */
-    #strategy .card.brand .en {
-      color: var(--primary);
-      text-align: left;
-      align-self: flex-start;
-    }
-    #strategy .card.brand {
-      align-items: flex-start;
-      text-align: left;
-    }
-    #strategy .card.brand h3.en,
-    #strategy .card.brand p {
-      text-align: left;
-      width: 100%;
-    }
-    /* モバイル用イメージはデフォルト非表示 */
-    .strategy-image-mobile { display: none; }
-  </style>
-  <style>
-    #founder { 
-      position: relative;
-      overflow: hidden;
-      min-height: clamp(780px, calc(100vw * 0.60), 1200px);
-    }
-    #founder::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: image-set(
-        url("HP_imageBG2.webp") type("image/webp"),
-        url("HP_imageBG2.jpg") type("image/jpg")
-      ) center top / cover no-repeat;
-      opacity: .85;
-      z-index: 0;
-      pointer-events: none;
-    }
-    #founder .founder-card {
-      position: relative;
-      background: rgba(255,255,255,.85);
-      backdrop-filter: saturate(120%) blur(3px);
-      -webkit-backdrop-filter: saturate(120%) blur(3px);
-      border: 1px solid rgba(2,6,23,.08);
-      border-radius: var(--radius);
-      box-shadow: 0 10px 28px rgba(2,6,23,.10);
-      padding: clamp(18px, 2.4vw, 28px);
-      z-index: 1;
-    }
-    #founder .container > :not(h2) {
-      padding-inline: clamp(18px, 2.4vw, 28px);
-    }
-    #founder .container > p:first-of-type {
-      padding-top: clamp(12px, 1.6vw, 18px);
-    }
-    #founder .container > :last-child {
-      padding-bottom: clamp(12px, 1.6vw, 18px);
-    }
-    #founder .founder-card {
-      display: block;
-      max-width: 640px;
-      /* PC: 左寄せレイアウトを維持 */
-      margin-left: max(4%, calc((100% - var(--maxw)) / 2));
-      margin-right: auto;
-    }
-    #founder h2.section-title {
-      position: relative;
-      z-index: 2; /* 背景オーバーレイより前へ */
-    }
-    /* モバイル用イメージはデフォルト非表示 */
-    .founder-image-mobile { display: none; }
-  </style>
-  <style>
-    /* COMPANYセクションを#company内に限定 (avoid conflicts) */
-    #company .company { display: grid; grid-template-columns: 1fr; gap: 12px; }
-    #company .rows { border-top: 1px solid var(--border); }
-    #company .row {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 18px;
-      padding: 14px 0;
-      border-bottom: 1px dashed var(--border);
-    }
-    #company .row .label { color: var(--muted); font-weight: 600; }
-    #company .row .value { color: var(--text); }
-    #company .hang {
-      display: block;
-      padding-left: 1.6em;
-      text-indent: -1.6em;
-      white-space: pre-line;
-    }
-    #company .section-title { margin-bottom: 20px; }
-  </style>
-  <style>
-    #contact { background: var(--bg-alt); padding: 64px 0; }
-    #contact .lead { color: var(--muted); margin-bottom: 20px; }
-    form {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-    }
-    label { display: block; margin: 10px 0 6px; }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid rgba(2,6,23,.15);
-      border-radius: 10px;
-    }
-    #contact form .btn { margin-top: 16px; }
-    p.note { color: var(--muted); font-size: 13px; margin: 10px 0 0; }
-    .hp {
-      position: absolute !important;
-      left: -10000px !important;
-      opacity: 0 !important;
-      height: 0 !important;
-      width: 0 !important;
-      pointer-events: none !important;
-    }
-  </style>
-  <style>
-    /* FAQ section basic styles */
-    #faq details {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fff;
-      padding: 12px 14px;
-      margin: 12px 0;
-    }
-    #faq summary {
-      cursor: pointer;
-      list-style: none;
-      font-weight: 700;
-      outline: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    #faq summary::-webkit-details-marker { display: none; }
-    /* ▶ closed / ▼ open indicator */
-    #faq summary::before { content: "▶"; display: inline-block; width: 1em; }
-    #faq details[open] > summary::before { content: "▼"; }
-    #faq details p,
-    #faq details ul { margin: 10px 0 0; }
-    #faq details[open] { border-color: rgba(2,6,23,.16); }
-    #faq details:focus-within { box-shadow: 0 0 0 3px rgba(2,128,202,.15); }
-  </style>
-  <style>
-    /* == [9.5 CSS: FOOTER] BEGIN == */
-    .site-footer {
-      background: var(--bg-alt);
-      border-top: 1px solid var(--border);
-      padding: 28px 0;
-    }
-    .site-footer .copyright {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      text-align: left; /* 他セクションと左ラインを合わせる */
-    }
-    @media (max-width: 560px) {
-      .site-footer { padding: 22px 0; }
-    }
-    /* == [9.5 CSS: FOOTER] END == */
-  </style>
-
-  <style>
-    @media (max-width: 720px) {
-      .hero-inner {
-        grid-template-columns: minmax(300px, 1fr) minmax(240px, .9fr);
-        column-gap: clamp(12px, 2.4vw, 22px);
-      }
-      :root {
-        --logo-vw: 36vw;
-        --logo-max: 400px;
-      }
-      .lead-line { white-space: normal; }
-      .lead { max-width: 100%; }
-      #company .row { grid-template-columns: 1fr; gap: 8px; }
-      #strategy { background-position: right top 155px; }
-
-      /* ★ 720px以下でハンバーガーメニューを表示し、ナビゲーションをドロワー化 ★ */
-      .menu-toggle {
-        display: block;
-        order: 2; /* ヘッダーの右端に配置 */
-      }
-      .header-inner .nav { display: none; }
-      .site-header.is-open .header-inner .nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        background: rgba(255,255,255,.98);
-        backdrop-filter: blur(8px);
-        border-top: 1px solid var(--border);
-        padding: 12px 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,.05);
-      }
-      .site-header.is-open .nav a {
-        padding: 10px 8%;
-        text-align: left;
-        border-bottom: 1px solid rgba(2,6,23,.03);
-      }
-      .site-header.is-open .nav .btn.small {
-        margin: 10px 8% 0;
-        text-align: center;
-        color: #fff;
-      }
-      /* ヘッダー全体が折り返すのを修正 */
-      .header-inner { flex-wrap: nowrap; }
-      .header-inner .nav { margin-top: 0; }
-    }
-
-    @media (max-width: 560px) {
-      /* ★ リード文の余白調整のために、コンテナの幅を上書き ★ */
-      .container { 
-        width: min(var(--maxw), 96%); /* 92%から96%に変更し、左右の余白を2%ずつに減らす */
-      }
-      
-      .hero-inner {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "header"
-          "title"
-          "map"
-          "logo"
-          "lead";
-        column-gap: clamp(12px, 2.4vw, 22px);
-      }
-      .hero-logo { justify-self: start; margin-top: 14px; }
-      :root {
-        --logo-min: 220px;
-        --logo-vw: 64vw;
-        --logo-max: 420px;
-      }
-      #strategy {
-        flex-direction: column;
-        align-items: center;
-        background:
-          linear-gradient(rgba(255,255,255,.96) 0%, rgba(255,255,255,.72) 36%, rgba(255,255,255,.16) 100%),
-          image-set(
-            url('HP_imageBG.webp') type('image/webp'),
-            url('HP_imageBG.jpg') type('image/jpg')
-          ) center top / contain no-repeat;
-        /* モバイル向けに高さ・余白を調整し背景画像を無効化 */
-        min-height: auto;
-        padding: 64px 0;
-        background: none;
-      }
-      .cards { max-width: 100%; }
-      #founder::after {
-        background-position: center top;
-        background-size: contain;
-      }
-      /* モバイルで表示する画像とレイアウト調整 */
-      .strategy-image-mobile, .founder-image-mobile { display: block; }
-      
-      /* ★ 画像の幅をコンテナの幅に合わせるための修正 ★ */
-      .strategy-image-mobile img, .founder-image-mobile img { 
-        display: block; 
-        margin: 0 auto;
-        max-width: var(--maxw); /* containerの最大幅に合わせる */
-        width: 100%; /* 親要素の100%に広げる */
-      }
-      
-      #founder {
-        min-height: auto;
-        padding: 64px 0;
-      }
-      #founder::after { background: none; }
-      
-      /* ★ founderカードの幅調整の追加（container中央寄せ） ★ */
-      #founder .founder-card {
-        display: block;
-        max-width: var(--maxw);
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      #founder .container > .founder-image-mobile { padding-inline: 0; }
-    }
-/* 見出しの単語途中折り・自動ハイフネーションを許可 */
-  .hero h1,
-  .section-title,
-  .section h2,
-  .section h3 {
-    word-break: normal;
-    overflow-wrap: anywhere;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    white-space: normal;
-  }
-
-  @media (max-width: 420px) {
-    .hero h1 {
-      font-size: clamp(24px, 8vw, 34px);
-      line-height: 1.18;
-    }
-    .section-title {
-      font-size: clamp(22px, 6.5vw, 28px);
-      line-height: 1.22;
-    }
-  }
-/* == About リード文の改行が早すぎる問題をスマホでだけ緩和 == */
-  @media (max-width: 560px) {
-    #about .lead {
-      max-width: none;
-      width: 100%;
-      line-height: 1.7;
-      text-wrap: normal;
-      overflow-wrap: anywhere;
-      -webkit-hyphens: auto;
-      hyphens: auto;
-    }
-    #about .lead-line { white-space: normal; }
-  }
-  </style>
-  <script type="application/ld+json">
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MIRAQLstudio Inc.",
-      "url": "https://miraqlstudio.com",
-      "logo": "https://miraqlstudio.com/HP_logo.jpg",
-      "foundingDate": "2025-09-19",
-      "founder": {
-        "@type": "Person",
-        "name": "Tsutomu Hiraga",
-        "jobTitle": "CEO / Game Producer / Content Planner"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "postalCode": "107-0061",
-        "addressRegion": "東京都",
-        "addressLocality": "港区",
-        "streetAddress": "北青山1-3-3 三橋ビル3階",
-        "addressCountry": "JP"
-      },
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "info@miraqlstudio.com",
-        "areaServed": "JP",
-        "availableLanguage": ["ja", "en"]
-      }],
-      "sameAs": [
-        "https://x.com/MIRAQLstudio"
-      ]
-    }
-  </script>
-  <script type="application/ld+json">
+      "@type": "Question",
+      "name": "どんな依頼に対応できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ゲーム・デジタルコンテンツの企画制作、開発進行、IP開発、俳優・声優のマネジメント、バーチャルタレントのプロデュースに対応しております。"
+      }
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "どんな依頼に対応できますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "以下の分野に対応しております。 ・ゲーム・デジタルコンテンツの企画制作（企画提案・企画書作成代行） ・ゲーム・デジタルコンテンツの開発進行（チーム組成・進行支援） ・IP開発（世界観構築・キャラクターデザイン・設定のご提案・メディアミックス展開のご提案） ・俳優・声優のマネジメント（出演・キャスティング・演技指導） ・バーチャルタレントのプロデュース（キャラクター制作〜配信環境セットアップ）"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "予算の目安はありますか？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "内容によりますが、1名稼働であれば数十万円規模からご相談可能です<br>億単位の大規模開発プロジェクトのチーム組成にも対応可能です。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "返信までの目安を教えてください",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "通常1〜3営業日以内にご連絡いたします<br>お急ぎの場合はフォームにその旨をご記載ください。"
-          }
-        }
-      ]
+      "@type": "Question",
+      "name": "予算の目安はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1名稼働であれば数十万円規模からご相談可能です。数百万単位の小中規模から億単位の大規模開発プロジェクトのチーム組成にも対応可能です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ゲーム業界以外の案件でも対応できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、可能です。ゲーミフィケーションを活用した企画提案や、異業種向けのデジタル体験設計も承っております。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アイデアが固まっていなくても相談できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "もちろん大丈夫です。コンセプト立案や方向性の整理など、アイデア段階から一緒に形にしていきます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "返信までの目安を教えてください",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "通常1〜2営業日以内にご連絡いたします。"
+      }
     }
-  </script>
-  <style>
-    /* Mobile: About→Strategy 間の余白を圧縮（スマホのみ） */
-    @media (max-width: 560px) {
-      /* About セクションの下パディングを小さく */
-      #about.section { padding-bottom: 24px; }
-      /* Strategy セクションの上パディングも少しだけ詰める */
-      #strategy.section { padding-top: 36px; }
-    }
-  </style>
+  ]
+}
+</script>
+<style>
+/* ── TOKENS ── */
+:root{
+  --blue:#0280CA;--blue-dk:#015f97;--blue-lt:#e4f2fa;
+  --white:#fff;--ink:#1a2d45;--ink-mid:#4a5e75;--ink-soft:#8a9ab0;
+  --rule:#e0e8f0;--surface:#f6f9fc;
+  --nav-h:56px;
+  --pad:clamp(24px,6%,80px);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Helvetica Neue',Arial,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif;
+  font-size:16px;color:var(--ink);background:var(--white);
+  line-height:1.8;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+
+/* ── 見出し共通: 縦積み、英語シマー + 日本語ミッドグレー ── */
+.sec-h{margin-bottom:16px;}
+.sec-h .en{
+  font-size:clamp(22px,3.2vw,30px);font-weight:800;display:block;margin-bottom:2px;
+  background:linear-gradient(95deg,#0280CA,#60D4FF,#A8DAFF,#0280CA);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;background-size:250% auto;
+  animation:sh 3.5s ease-in-out infinite;
+  filter:drop-shadow(0 0 5px rgba(64,196,255,.28));
+}
+@keyframes sh{0%{background-position:100% center}50%{background-position:0% center}100%{background-position:100% center}}
+.sec-h .ja{
+  font-size:clamp(16px,2vw,20px);font-weight:700;
+  color:#6b8096;display:block;
+}
+.bar{width:24px;height:2px;background:var(--blue);border-radius:1px;margin-bottom:36px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;inset:0 0 auto;height:var(--nav-h);
+  background:rgba(255,255,255,.97);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule);z-index:900;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 var(--pad);gap:12px;
+}
+.nav-logo{flex-shrink:0;}
+.nav-logo img{height:26px;width:auto;}
+.nav-logo-fb{font-weight:800;font-size:13px;color:var(--blue);display:none;}
+.nav-links{display:flex;align-items:center;list-style:none;}
+.nav-links a{font-size:12px;font-weight:500;color:var(--ink-mid);padding:5px 9px;border-radius:4px;transition:color .15s,background .15s;white-space:nowrap;}
+.nav-links a:hover{color:var(--blue);background:var(--blue-lt);}
+.nav-links .cta{background:var(--blue);color:var(--white);padding:6px 16px;border-radius:5px;font-weight:700;margin-left:6px;}
+.nav-links .cta:hover{background:var(--blue-dk);color:var(--white);}
+.nav-ham{display:none;flex-direction:column;gap:5px;width:32px;height:32px;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;flex-shrink:0;}
+.nav-ham span{display:block;width:20px;height:1.5px;background:var(--ink);border-radius:2px;transition:all .3s;}
+
+/* ── HERO ── */
+.hero{
+  margin-top:var(--nav-h);background:var(--blue);
+  padding:clamp(40px,6vw,72px) var(--pad);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;
+}
+.hero canvas{position:absolute;inset:0;pointer-events:none;z-index:0;}
+.hero-in{position:relative;z-index:1;width:100%;}
+.hero-logo{height:clamp(36px,5.5vw,60px);width:auto;margin-bottom:clamp(20px,3.5vw,36px);opacity:0;animation:fu .5s ease .05s forwards;}
+.hero-logo-fb{font-weight:800;font-size:clamp(18px,3vw,28px);letter-spacing:.05em;color:var(--white);margin-bottom:clamp(20px,3.5vw,36px);opacity:0;animation:fu .5s ease .05s forwards;display:none;}
+.hero-hl{font-size:clamp(32px,6.5vw,72px);font-weight:800;line-height:1.04;letter-spacing:-.025em;color:var(--white);margin-bottom:clamp(16px,2.5vw,28px);}
+.hero-hl .a{color:#A8DAFF;}
+.hero-hl div{opacity:0;}
+.hero-hl div:nth-child(1){animation:fu .5s ease .15s forwards;}
+.hero-hl div:nth-child(2){animation:fu .5s ease .28s forwards;}
+.hero-hl div:nth-child(3){animation:fu .5s ease .41s forwards;}
+.hero-desc{font-size:clamp(14px,2vw,16px);color:rgba(255,255,255,.8);max-width:540px;line-height:1.9;opacity:0;animation:fu .5s ease .54s forwards;}
+@keyframes fu{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:none;}}
+
+/* ── SECTION BASE ── */
+.sec{padding:clamp(56px,8vw,100px) var(--pad);}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:center;}
+.about-text p{font-size:15px;color:var(--ink-mid);line-height:1.95;margin-bottom:14px;}
+.about-text p:last-child{margin-bottom:0;}
+.about-img{aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--surface);}
+.about-img img{width:100%;height:100%;object-fit:cover;}
+
+/* ── STRATEGY ── */
+.strat-sec{background:var(--surface);}
+.strat-list{display:flex;flex-direction:column;}
+.strat-row{display:grid;grid-template-columns:clamp(60px,10vw,80px) clamp(44px,6vw,56px) 1fr;column-gap:clamp(14px,2.5vw,24px);border-top:1px solid var(--rule);padding:clamp(20px,3.5vw,28px) 0;align-items:start;}
+.strat-row:last-child{border-bottom:1px solid var(--rule);}
+.strat-acr{font-size:clamp(36px,6.5vw,52px);font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--blue);white-space:nowrap;}
+.strat-acr.sm{font-size:clamp(20px,3.5vw,28px);padding-top:clamp(6px,1vw,10px);}
+.strat-icon{width:clamp(44px,6vw,56px);height:clamp(44px,6vw,56px);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;}
+.strat-icon img{width:100%;height:100%;object-fit:contain;}
+/* アイコン仮枠 */
+.icon-ph{width:100%;height:100%;background:var(--blue-lt);border:1.5px dashed #a8cde0;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#7ab8d8;font-size:9px;font-weight:600;text-align:center;gap:2px;}
+.icon-ph small{font-size:8px;color:#a8cde0;}
+.strat-name{font-size:clamp(14px,1.8vw,16px);font-weight:700;color:var(--ink);margin-bottom:4px;}
+.strat-ja{font-size:11px;color:var(--ink-soft);letter-spacing:.1em;display:block;margin-bottom:10px;}
+.strat-body{font-size:clamp(13px,1.5vw,14px);color:var(--ink-mid);line-height:1.85;}
+
+/* ── FOUNDER ── */
+.founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:start;}
+.founder-img{aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--surface);}
+.founder-img img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+.founder-name{font-size:clamp(18px,2.5vw,22px);font-weight:800;color:var(--ink);margin-bottom:4px;}
+.founder-role{font-size:13px;color:var(--blue);font-weight:500;line-height:1.6;margin-bottom:24px;}
+.founder-bio{font-size:clamp(13px,1.6vw,15px);color:var(--ink-mid);line-height:1.95;margin-bottom:14px;}
+.founder-bio:last-child{margin-bottom:0;}
+
+/* ── WORKS ── */
+.works-sec{background:var(--surface);}
+.works-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;}
+.w-card{background:var(--white);border-radius:8px;border:1px solid var(--rule);overflow:hidden;transition:transform .22s,box-shadow .22s;}
+.w-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(2,128,202,.12);}
+.w-thumb{aspect-ratio:16/9;overflow:hidden;background:#0d2137;position:relative;}
+.w-thumb img{width:100%;height:100%;object-fit:cover;}
+/* サムネ仮枠 */
+.thumb-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:rgba(255,255,255,.25);font-size:11px;gap:4px;}
+.w-info{padding:14px 16px 18px;}
+.w-title{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:10px;}
+.w-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.tag{font-size:10px;font-weight:700;padding:3px 9px;border-radius:3px;text-decoration:none;}
+.tag:hover{opacity:.82;}
+.tag-steam{background:#1b2838;color:#c7d5e0;}
+.tag-app  {background:#0d84e8;color:#fff;}
+.tag-gp   {background:#01875f;color:#fff;}
+.tag-ps5  {background:#003087;color:#fff;}
+.tag-sw   {background:#e4000f;color:#fff;}
+.w-dim{font-size:12px;color:var(--ink-soft);}
+
+/* ── COMPANY ── */
+.co-logo{margin-bottom:24px;}
+.co-logo img{height:30px;width:auto;}
+.co-logo-fb{font-weight:800;font-size:16px;color:var(--blue);display:none;}
+.co-table{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:16px;}
+.co-table tr{border-bottom:1px solid var(--rule);}
+.co-table th{text-align:left;padding:14px 14px 14px 0;color:var(--blue);font-weight:600;font-size:12px;width:110px;vertical-align:top;white-space:nowrap;}
+.co-table td{padding:14px 0;color:var(--ink-mid);line-height:1.7;font-size:14px;}
+.clients{padding-top:12px;border-top:1px solid var(--rule);margin-bottom:32px;}
+.clients-lbl{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;}
+.clients-note{font-size:12px;color:var(--ink-soft);margin-bottom:12px;}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;}
+.chips li{font-size:14px;color:var(--ink-mid);background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:7px 14px;}
+.sns-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.sns-lbl{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-right:2px;}
+.sns-btn{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--ink);padding:8px 14px;border:1px solid var(--rule);border-radius:6px;cursor:pointer;transition:color .15s,border-color .15s,background .15s;}
+.sns-btn svg{width:15px;height:15px;fill:currentColor;flex-shrink:0;}
+.sns-btn:hover{color:var(--blue);border-color:var(--blue);background:var(--blue-lt);}
+.sns-btn.dim{opacity:.35;pointer-events:none;}
+
+/* ── CONTACT ── */
+.contact-sec{background:var(--surface);}
+.contact-lede{font-size:15px;color:var(--ink-mid);line-height:1.9;margin-bottom:28px;max-width:520px;}
+.contact-form{max-width:520px;}
+.form-row{margin-bottom:14px;}
+.form-row label{display:block;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:6px;letter-spacing:.04em;}
+.form-row .opt{font-weight:400;color:var(--ink-soft);margin-left:4px;}
+.form-row .req{color:#c0392b;margin-left:4px;}
+.form-row input,.form-row textarea{width:100%;padding:10px 12px;border:1.5px solid var(--rule);border-radius:6px;background:var(--white);color:var(--ink);font-size:14px;font-family:inherit;outline:none;transition:border-color .15s,box-shadow .15s;}
+.form-row input:focus,.form-row textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(2,128,202,.09);}
+.form-row input::placeholder,.form-row textarea::placeholder{color:var(--ink-soft);}
+.form-row textarea{min-height:120px;resize:vertical;}
+.btn-send{padding:12px 36px;background:var(--blue);color:var(--white);font-weight:700;font-size:15px;font-family:inherit;border:none;border-radius:6px;cursor:pointer;transition:background .15s,transform .15s;}
+.btn-send:hover{background:var(--blue-dk);transform:translateY(-1px);}
+.form-policy{font-size:11px;color:var(--ink-soft);margin-top:14px;line-height:1.7;}
+
+/* ── FAQ ── */
+.faq-wrap{max-width:680px;}
+.faq-item{border-bottom:1px solid var(--rule);}
+.faq-item:first-child{border-top:1px solid var(--rule);}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 0;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:inherit;transition:color .15s;}
+.faq-q:hover{color:var(--blue);}
+.faq-ico{width:16px;height:16px;flex-shrink:0;position:relative;}
+.faq-ico::before,.faq-ico::after{content:'';position:absolute;background:var(--blue);border-radius:1px;transition:opacity .25s,transform .25s;}
+.faq-ico::before{width:10px;height:1.5px;top:7px;left:3px;}
+.faq-ico::after{width:1.5px;height:10px;top:3px;left:7px;}
+.faq-item.open .faq-ico::after{opacity:0;transform:rotate(90deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-a-in{padding:2px 0 16px;font-size:14px;color:var(--ink-mid);line-height:1.85;}
+.faq-a-in strong{color:var(--ink);}
+.faq-item.open .faq-a{max-height:600px;}
+
+/* ── FOOTER ── */
+footer{background:#0d2137;padding:24px var(--pad);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.footer-logo img{height:20px;width:auto;}
+.footer-logo-fb{font-size:12px;font-weight:700;color:rgba(255,255,255,.45);display:none;}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.35);}
+.footer-sns{display:flex;gap:6px;}
+.footer-sns a,.footer-sns span{width:28px;height:28px;border-radius:5px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);transition:background .15s,color .15s;}
+.footer-sns a:hover{background:var(--blue);color:var(--white);}
+.footer-sns .dim{opacity:.2;pointer-events:none;}
+.footer-sns svg{width:14px;height:14px;fill:currentColor;}
+
+/* ── ANIMATIONS ── */
+.sr{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease;}
+.sr.on{opacity:1;transform:none;}
+.sl{opacity:0;transform:translateX(-20px);transition:opacity .5s ease,transform .5s ease;}
+.sl.on{opacity:1;transform:none;}
+.sl-d1{transition-delay:.08s;}.sl-d2{transition-delay:.16s;}.sl-d3{transition-delay:.24s;}
+@media(prefers-reduced-motion:reduce){.sr,.sl{opacity:1;transform:none;transition:none;}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  .about-grid,.founder-grid{grid-template-columns:1fr;gap:24px;}
+  .about-img{order:1;}
+  .founder-img{order:-1;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--white);border-bottom:1px solid var(--rule);flex-direction:column;align-items:stretch;padding:12px var(--pad) 20px;box-shadow:0 8px 24px rgba(0,0,0,.08);}
+  .nav-links.open{display:flex;}
+  .nav-links a{display:block;padding:13px 6px;font-size:15px;border-bottom:1px solid var(--surface);border-radius:0;}
+  .nav-links a:last-child{border-bottom:none;}
+  .nav-links .cta{text-align:center;margin:8px 0 0;border-radius:6px;}
+  .nav-ham{display:flex;}
+  .sec{padding:52px var(--pad);}
+  .strat-row{grid-template-columns:clamp(48px,9vw,64px) clamp(36px,5vw,44px) 1fr;column-gap:12px;}
+}
+@media(max-width:480px){
+  .works-grid{grid-template-columns:1fr;}
+  footer{flex-direction:column;align-items:flex-start;gap:12px;}
+}
+</style>
 </head>
 <body>
-<header class="site-header" role="banner">
-  <div class="container header-inner">
-    <a href="#" class="brand" aria-label="Home"><strong>MIRAQLstudio Inc.</strong></a>
-    <nav class="nav" aria-label="メイン">
-      <a href="#about">About<span class="sr-only">（概要）</span></a>
-      <a href="#strategy">Strategy<span class="sr-only">（企画戦略）</span></a>
-      <a href="#founder">Founder<span class="sr-only">（代表挨拶）</span></a>
-      <a href="#company">Company<span class="sr-only">（会社情報）</span></a>
-      <a href="#faq">FAQ<span class="sr-only">（よくある質問）</span></a>
-      <a href="#contact" class="btn small">Contact<span class="sr-only">（お問い合わせ）</span></a>
-    </nav>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
-        <span class="sr-only">メニューを開く</span>
-        <span class="menu-toggle-icon"></span>
-    </button>
+
+<!-- NAV -->
+<!-- ロゴ: HP_logo_blue.webp  透過・青字  推奨520×144px -->
+<nav>
+  <a href="#" class="nav-logo" aria-label="MIRAQLstudio トップへ">
+    <img src="HP_logo_blue.webp" alt="MIRAQLstudio"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="nav-logo-fb">MIRAQLstudio</span>
+  </a>
+  <ul class="nav-links" id="navLinks" role="list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#strategy">Strategy</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#company">Company</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="cta">Contact</a></li>
+  </ul>
+  <button class="nav-ham" id="navHam" aria-label="メニュー" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<!-- 背景画像: HP_hero.webp  推奨1920×1080px -->
+<!-- ロゴ: HP_logo_white.webp  透過・白字  推奨520×144px -->
+<section class="hero" id="top">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-in">
+    <img class="hero-logo" src="HP_logo_white.webp" alt="MIRAQLstudio"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <div class="hero-logo-fb">MIRAQLstudio</div>
+    <div class="hero-hl">
+      <div><span class="a">M</span>ake it <span class="a">I</span>magined.</div>
+      <div><span class="a">R</span>eshape <span class="a">A</span>rcs.</div>
+      <div><span class="a">Q</span>uest and <span class="a">L</span>eap.</div>
     </div>
-</header>
-<main>
-  <section id="about" class="section hero" aria-labelledby="hero-title">
-    <div class="container hero-inner">
-      <div class="hero-header">
-        <h2 class="section-title">概要 / About</h2>
-      </div>
+    <p class="hero-desc">ゲーム・デジタルコンテンツの企画制作とIP開発支援を行うクリエイティブスタジオ。</p>
+  </div>
+</section>
 
-      <div class="hero-title">
-        <h1 id="hero-title">
-          <span><span class="hl">M</span>ake it <span class="hl">I</span>magined.</span><br>
-          <span><span class="hl">R</span>eshape <span class="hl">A</span>rcs.</span><br>
-          <span><span class="hl">Q</span>uest and <span class="hl">L</span>eap.</span>
-        </h1>
-      </div>
-
-      <ul class="hero-map">
-        <li><strong>Make it Imagined</strong> — 想像を形に</li>
-        <li><strong>Reshape Arcs</strong> — 物語を塗り替える</li>
-        <li><strong>Quest and Leap</strong> — 挑み、跳び越える</li>
-      </ul>
-
-      <div class="hero-visual hero-logo" aria-hidden="true">
-        <picture>
-          <source srcset="HP_logo.webp" type="image/webp">
-          <img src="HP_logo.webp" alt="MIRAQLstudio公式ロゴ" width="1472" height="740" decoding="async" fetchpriority="high">
-        </picture>
-      </div>
-
-      <p class="lead">
-        <span class="lead-line">株式会社MIRAQLstudio（ミラクルスタジオ）は、</span>
-        <span class="lead-line">ゲームやデジタルコンテンツの企画制作・IP開発支援を行うクリエイティブスタジオです。</span>
-        <span class="lead-line">柔軟な発想と現実的な実装手段を両立し、アイデアをスピーディに形にします。</span>
-        <span class="lead-line">共有から拡散へとつながる導線を描き、小さな点が奇跡を生むコンテンツを創造します。</span>
-      </p>
+<!-- ABOUT -->
+<!-- HP_about.webp  推奨1920×1080px (16:9) -->
+<section class="sec" id="about">
+  <h2 class="sec-h sr"><span class="en">About</span><span class="ja">概要</span></h2>
+  <div class="bar sr"></div>
+  <div class="about-grid">
+    <div class="about-text sr">
+      <p>株式会社MIRAQLstudio（ミラクルスタジオ）は、ゲームやデジタルコンテンツの企画制作・IP開発支援を行うクリエイティブスタジオです。</p>
+      <p>「共有から拡散へ」をキーワードに、企画の初期段階から拡散動線を設計し、小さな点が奇跡を生むコンテンツを創ります。</p>
+      <p>「MIRAQL」— 奇跡を創ること。想像を超える体験を世界に届けることが、私たちのミッションです。</p>
     </div>
-    <h1 class="sr-only">ゲーム・デジタルコンテンツ企画制作のMIRAQLstudio</h1>
-  </section>
-  <section id="strategy" class="section" aria-labelledby="strategy-title">
-    <div class="container">
-      <h2 id="strategy-title" class="section-title">企画戦略 / Strategy</h2>
-      <div class="strategy-image-mobile" aria-hidden="true">
-        <picture>
-          <source srcset="HP_imageBG.webp" type="image/webp">
-          <img src="HP_imageBG.jpg" alt="企画戦略イメージ" loading="lazy" decoding="async">
-        </picture>
-      </div>
-      <div class="cards">
-        <article class="card"><h3 class="en">Make it Imagined</h3><p class="brfix">小規模から大規模までの開発ノウハウを活かし、予算や体制に合わせた現実的な企画を設計。<br><strong>プランニングからディレクション、マネジメント、プロデュース</strong>までを一気通貫で支援し、確実に実装可能なプロジェクトへ導きます。</p></article>
-        <article class="card"><h3 class="en">Reshape Arcs</h3><p class="brfix">既存のゲームエンジンや制作環境を活用し、スピード感ある開発を指揮。<br>複数IPへの展開を見据え、“物語を塗り替える”ように横展開しやすい構造を整え、再現性と運用効率を高めます。</p></article>
-        <article class="card"><h3 class="en">Quest and Leap</h3><p class="brfix">SNSやUGCを前提に初期段階から“拡散しやすい企画設計”を組み込みます。<br>昨今の配信文化を踏まえ、配信映え・実況のしやすいをゲーム性を重視し、想定を跳び越えるKPIへ挑戦します。</p></article>
-        <article class="card brand"><h3 class="en">MIRAQL</h3><p class="brfix">“Make it Imagined / Reshape Arcs / Quest and Leap” の３つの戦略を軸に、<br><strong>オリジナルIPの創出／企画立案の制作支援／開発チームの組成・進行支援</strong>を行います。現実的な戦略と柔軟な発想で実行します。</p></article>
-      </div>
+    <div class="about-img sr">
+      <img src="HP_about.webp" alt="MIRAQLstudio"
+        onerror="this.style.display='none'">
     </div>
-  </section>
-  <section id="founder" class="section alt" aria-labelledby="founder-title">
-    <div class="container">
-      <h2 id="founder-title" class="section-title">代表紹介 / Founder</h2>
-      <div class="founder-image-mobile" aria-hidden="true">
-        <picture>
-          <source srcset="HP_imageBG2.webp" type="image/webp">
-          <img src="HP_imageBG2.jpg" alt="代表紹介イメージ" loading="lazy" decoding="async">
-        </picture>
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<!-- アイコン: HP_icon_mi.webp / HP_icon_ra.webp / HP_icon_ql.webp / HP_icon_miraql.webp  透過200×200px -->
+<section class="sec strat-sec" id="strategy">
+  <h2 class="sec-h sr"><span class="en">Strategy</span><span class="ja">企画戦略</span></h2>
+  <div class="bar sr"></div>
+  <div class="strat-list">
+
+    <div class="strat-row sl">
+      <div class="strat-acr">MI</div>
+      <div class="strat-icon">
+        <img src="HP_icon_mi.webp" alt="AIアイコン"
+          onerror="this.outerHTML='<div class=\'icon-ph\'>AI<br><small>200×200</small></div>'">
       </div>
-      <div class="founder-card">
-        <p><strong>平賀 勉（Hiraga Tsutomu）</strong><br>
-          株式会社MIRAQLstudio 代表取締役<br>
-          ゲームプロデューサー / コンテンツプランナー / ボイスアクター</p>
-
-        <p>学生時代は演劇を学び、舞台俳優や声優、ラジオパーソナリティとして表現活動に携わる中で、映像作品の自主制作にも取り組み、その経験をきっかけにクリエイター業界へ転身し、コナミスクールにてゲームプランニングを学ぶ。</p>
-        <p>2012年、株式会社Cygamesに入社し、プランナー／ディレクター／プロジェクトマネージャーとして、スマートフォンからコンソールまで多数のタイトルの開発に携わる。</p>
-
-        <p>2020年以降は、外資系ユニコーン企業やベンチャー企業でプロデューサーとして経験を重ねる傍ら、ゲーム実況の配信者としても活動。<br>
-その中で培った視点から、共有したくなる熱量と、拡散力が両立する――奇跡を起こすコンテンツを実現すべく、株式会社MIRAQLstudioを設立。</p>
+      <div>
+        <p class="strat-name">Make it Imagined<span class="strat-ja">想像を形に</span></p>
+        <p class="strat-body">小規模から大規模までの開発ノウハウを活かし、予算や体制に合わせた現実的な企画をAIを活用しながら最速で設計。プランニングからプロデュースまでを一気通貫で支援します。</p>
       </div>
     </div>
-  </section>
-  <section id="company" class="section" aria-labelledby="company-title">
-    <div class="container company">
-      <h2 id="company-title" class="section-title">会社情報 / Company</h2>
-      <div class="rows" role="table" aria-label="会社情報">
-        <div class="row" role="row">
-          <div class="label" role="rowheader">社名</div>
-          <div class="value" role="cell">株式会社MIRAQLstudio <small>(MIRAQLstudio Inc.)</small></div>
+
+    <div class="strat-row sl sl-d1">
+      <div class="strat-acr">RA</div>
+      <div class="strat-icon">
+        <img src="HP_icon_ra.webp" alt="スマホアイコン"
+          onerror="this.outerHTML='<div class=\'icon-ph\'>スマホ<br><small>200×200</small></div>'">
+      </div>
+      <div>
+        <p class="strat-name">Reshape Arcs<span class="strat-ja">物語を塗り替える</span></p>
+        <p class="strat-body">既存のゲームエンジンや制作環境を活用し、スピード感ある開発を指揮。複数IPへの展開を見据え、横展開しやすい構造を整え、再現性と運用効率を高めます。</p>
+      </div>
+    </div>
+
+    <div class="strat-row sl sl-d2">
+      <div class="strat-acr">QL</div>
+      <div class="strat-icon">
+        <img src="HP_icon_ql.webp" alt="配信アイコン"
+          onerror="this.outerHTML='<div class=\'icon-ph\'>配信<br><small>200×200</small></div>'">
+      </div>
+      <div>
+        <p class="strat-name">Quest and Leap<span class="strat-ja">挑み、跳び越える</span></p>
+        <p class="strat-body">SNSやUGCを前提に初期段階から"拡散しやすい企画設計"を組み込みます。配信映え・実況のしやすいゲーム性を重視し、想定を跳び越えるKPIへ挑戦します。</p>
+      </div>
+    </div>
+
+    <div class="strat-row sl sl-d3">
+      <div class="strat-acr sm">MIRAQL</div>
+      <div class="strat-icon">
+        <!-- HP_icon_miraql.webp: バラのシンボルマーク（文字なし）透過200×200px -->
+        <img src="HP_icon_miraql.webp" alt="MIRAQLシンボル"
+          onerror="this.outerHTML='<div class=\'icon-ph\'>バラ<br><small>200×200</small></div>'">
+      </div>
+      <div>
+        <p class="strat-name">MIRAQL<span class="strat-ja">奇跡を創る</span></p>
+        <p class="strat-body">「Make it Imagined / Reshape Arcs / Quest and Leap」の3つの戦略を軸に、オリジナルIPの創出・企画制作支援・開発チームの組成および進行を支援。現実的な戦略と柔軟な発想で実行します。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<!-- HP_founder.webp  推奨960×540px (16:9)  スマホ:テキスト上に表示 -->
+<section class="sec" id="founder">
+  <h2 class="sec-h sr"><span class="en">Founder</span><span class="ja">代表挨拶</span></h2>
+  <div class="bar sr"></div>
+  <div class="founder-grid">
+    <div class="sr">
+      <p class="founder-name">平賀 勉（Hiraga Tsutomu）</p>
+      <p class="founder-role">株式会社MIRAQLstudio 代表取締役<br>ゲームプロデューサー / コンテンツプランナー / ボイスアクター</p>
+      <p class="founder-bio">学生時代は演劇を学び、舞台俳優や声優、ラジオパーソナリティとして表現活動に携わる中で、映像作品の自主制作にも取り組み、その経験をきっかけにクリエイター業界へ転身し、コナミスクールにてゲームプランニングを学ぶ。</p>
+      <p class="founder-bio">2012年、株式会社Cygamesに入社し、プランナー／ディレクター／プロジェクトマネージャーとして、スマートフォンからコンソールまで多数のタイトルの開発に携わる。</p>
+      <p class="founder-bio">2020年以降は、外資系ユニコーン企業やベンチャー企業でプロデューサーとして経験を重ねる傍ら、ゲーム実況の配信者としても活動。その中で培った視点から、共有したくなる熱量と拡散力が両立する――奇跡を起こすコンテンツを実現すべく、株式会社MIRAQLstudioを設立。</p>
+    </div>
+    <div class="founder-img sr">
+      <img src="HP_founder.webp" alt="代表 平賀勉"
+        onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<!-- HP_work_nekohero.webp  推奨640×360px (16:9) -->
+<section class="sec works-sec" id="works">
+  <h2 class="sec-h sr"><span class="en">Works</span><span class="ja">開発実績</span></h2>
+  <div class="bar sr"></div>
+  <div class="works-grid">
+    <div class="w-card sr">
+      <div class="w-thumb">
+        <img src="HP_work_nekohero.webp" alt="NEKOHERO"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="thumb-ph" style="display:none;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          HP_work_nekohero.webp
         </div>
-        <div class="row" role="row">
-          <div class="label" role="rowheader">所在地</div>
-          <div class="value" role="cell">〒107-0061 東京都港区北青山1-3-3 三橋ビル3階</div>
+      </div>
+      <div class="w-info">
+        <p class="w-title">NEKOHERO</p>
+        <div class="w-tags">
+          <a href="https://store.steampowered.com/app/4844970/NEKOHERO/" class="tag tag-steam" target="_blank" rel="noopener">Steam</a>
         </div>
-        <div class="row" role="row">
-          <div class="label" role="rowheader">設立</div>
-          <div class="value" role="cell">2025年9月19日</div>
-        </div>
-        <div class="row" role="row">
-          <div class="label" role="rowheader">資本金</div>
-          <div class="value" role="cell">100万円</div>
-        </div>
-        <div class="row" role="row">
-          <div class="label" role="rowheader">代表者</div>
-          <div class="value" role="cell">代表取締役　平賀 勉</div>
-        </div>
-        <div class="row" role="row">
-          <div class="label" role="rowheader">事業内容</div>
-          <div class="value" role="cell">
-            <span class="hang">ゲーム及びデジタルコンテンツの企画・開発・プロデュース</span>
-            <span class="hang">俳優、声優、バーチャルタレントのマネジメント・プロデュース</span>
-          </div>
-        </div>
+        <a href="https://store.steampowered.com/app/4844970/NEKOHERO/" class="w-link" target="_blank" rel="noopener">Steam で見る →</a>
       </div>
     </div>
-  </section>
-  <section id="contact" aria-labelledby="contact-title">
-    <div class="container">
-      <h2 id="contact-title" class="section-title">お問い合わせ / Contact</h2>
-      <p class="lead">お仕事のご依頼・ご相談等、お気軽にお問い合わせください</p>
-      <form action="https://api.staticforms.xyz/submit" method="POST">
-  <input type="hidden" name="accessKey" value="sf_48lm2d52n690beehd67h5h67">
-  <input type="hidden" name="redirectTo" value="https://miraqlstudio.com/thanks.html">
-  <input type="text" name="honeypot" style="display:none">
-  <label>会社名（任意）</label>
-  <input type="text" name="company" placeholder="例）株式会社○○">
-  <label>お名前</label>
-  <input type="text" name="name" required placeholder="例）ミラクル イチロウ">
-  <label>メールアドレス</label>
-  <input type="email" name="email" required placeholder="例）you@example.com">
-  <label>お問い合わせ内容</label>
-  <textarea name="message" rows="6" required placeholder="ご用件をご入力ください"></textarea>
-  <button type="submit" class="btn">送信する</button>
-</form>
-      <p class="note">当サイトでは、ユーザーの個人情報を適切に取り扱い、第三者に提供することはありません。<br>
-本ポリシーの内容は、法令等の変更により改定されることがあります。</p>
+    <!--
+    ■ 作品追加テンプレート（ここをコピーして追加）
+    <div class="w-card sr">
+      <div class="w-thumb">
+        <img src="HP_work_ファイル名.webp" alt="タイトル名" onerror="this.style.display='none'">
+      </div>
+      <div class="w-info">
+        <p class="w-title">タイトル名</p>
+        <div class="w-tags">
+          使うタグだけ残す:
+          <a href="URL" class="tag tag-steam" target="_blank" rel="noopener">Steam</a>
+          <a href="URL" class="tag tag-app"   target="_blank" rel="noopener">App Store</a>
+          <a href="URL" class="tag tag-gp"    target="_blank" rel="noopener">Google Play</a>
+          <a href="URL" class="tag tag-ps5"   target="_blank" rel="noopener">PS5</a>
+          <a href="URL" class="tag tag-sw"    target="_blank" rel="noopener">Switch 2</a>
+        </div>
+        <a href="URL" class="w-link" target="_blank" rel="noopener">詳細を見る →</a>
+      </div>
     </div>
-    <script>
-      (()=> {
-        const form = document.querySelector('#contact form');
-        const started = document.getElementById('started_at');
-        if(form && started){
-          started.value = Date.now();
-          form.addEventListener('submit', (e)=>{
-            gtag('event', 'generate_lead');
-            const delta = Date.now() - Number(started.value||0);
-            if(delta < 3000){
-              e.preventDefault();
-              alert('送信が早すぎるみたい もう一度だけ送信してね');
-            }
-          });
-        }
-      })();
-    </script>
-  </section>
-  <section id="faq" class="section" aria-labelledby="faq-title">
-    <div class="container">
-      <h2 id="faq-title" class="section-title">よくある質問 / FAQ</h2>
+    -->
+  </div>
+</section>
 
-      <details>
-        <summary><strong>どんな依頼に対応できますか？</strong></summary>
-        <p>A. 以下の分野に対応しております</p>
+<!-- COMPANY -->
+<!-- HP_logo_blue.webp  透過・青字  推奨520×144px -->
+<section class="sec" id="company">
+  <h2 class="sec-h sr"><span class="en">Company</span><span class="ja">会社情報</span></h2>
+  <div class="bar sr"></div>
+  <div class="co-logo sr">
+    <img src="HP_logo_blue.webp" alt="MIRAQLstudio"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="co-logo-fb">MIRAQLstudio</span>
+  </div>
+  <table class="co-table sr" aria-label="会社情報">
+    <tr><th scope="row">社名</th><td>株式会社MIRAQLstudio（MIRAQLstudio Inc.）</td></tr>
+    <tr><th scope="row">所在地</th><td>〒107-0061 東京都港区北青山1-3-3 三橋ビル3階</td></tr>
+    <tr><th scope="row">設立</th><td>2025年9月19日</td></tr>
+    <tr><th scope="row">資本金</th><td>100万円</td></tr>
+    <tr><th scope="row">代表者</th><td>代表取締役　平賀 勉</td></tr>
+    <tr><th scope="row">事業内容</th><td>ゲーム及びデジタルコンテンツの企画・開発・プロデュース<br>俳優、声優、バーチャルタレントのマネジメント・プロデュース</td></tr>
+  </table>
+  <div class="clients sr">
+    <p class="clients-lbl">主な取引先</p>
+    <p class="clients-note">掲載順不同</p>
+    <ul class="chips" aria-label="主な取引先">
+      <!-- 追加: <li>会社名</li> を1行コピーするだけ -->
+      <li>株式会社Puri Prince</li>
+      <li>株式会社Loxarc</li>
+    </ul>
+  </div>
+  <div class="sns-row sr" aria-label="公式SNS">
+    <span class="sns-lbl">SNS</span>
+    <a href="https://x.com/MIRAQLstudio" class="sns-btn" target="_blank" rel="noopener" aria-label="X(Twitter)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X (Twitter)
+    </a>
+    <!-- note: 公開後に span→a に変更、dim削除、href設定 -->
+    <span class="sns-btn dim" aria-label="note（準備中）">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 2h-11C5.12 2 4 3.12 4 4.5v15C4 20.88 5.12 22 6.5 22h11c1.38 0 2.5-1.12 2.5-2.5v-15C20 3.12 18.88 2 17.5 2zM8 7h8v1.5H8V7zm0 4h8v1.5H8V11zm0 4h5v1.5H8V15z"/></svg>
+      note（準備中）
+    </span>
+    <a href="https://www.linkedin.com/in/%E5%8B%89-%E5%B9%B3%E8%B3%80-16491b391/" class="sns-btn" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LinkedIn
+    </a>
+  </div>
+</section>
 
-        <p><strong>ゲーム・デジタルコンテンツの企画制作</strong><br>
-          企画提案、企画書作成代行など、目的に応じたプランニングを行います</p>
-
-        <p><strong>ゲーム・デジタルコンテンツの開発進行</strong><br>
-          チーム組成、開発進行支援など、開発体制の構築と管理をサポートします</p>
-
-        <p><strong>IP開発</strong><br>
-          世界観構築やキャラクターデザイン、設定のご提案、メディアミックス展開を含めたご提案等に対応します</p>
-
-        <p><strong>俳優・声優のマネジメント</strong><br>
-          出演・キャスティング・演技指導等、表現者の活動支援を行います</p>
-
-        <p><strong>バーチャルタレントのプロデュース</strong><br>
-          キャラクター制作から配信環境のセットアップまで、トータルに対応します</p>
-      </details>
-
-      <details>
-        <summary><strong>予算の目安はありますか？</strong></summary>
-        <p>A. 1名稼働であれば数十万円規模からご相談可能です<br>
-          数百万単位の小中規模から億単位の大規模開発プロジェクトのチーム組成にも対応可能です</p>
-      </details>
-
-      <details>
-        <summary><strong>ゲーム業界以外の案件でも対応できますか？</strong></summary>
-        <p>A. はい、可能です<br>
-          ゲーミフィケーションを活用した企画提案や、異業種向けのデジタル体験設計も承っております</p>
-      </details>
-
-      <details>
-        <summary><strong>アイデアが固まっていなくても相談できますか？</strong></summary>
-        <p>A. もちろん大丈夫です<br>
-          コンセプト立案や方向性の整理など、アイデア段階から一緒に形にしていきます</p>
-      </details>
-
-      <details>
-        <summary><strong>返信までの目安を教えてください</strong></summary>
-        <p>A. 通常1、2営業日以内にご連絡いたします</p>
-      </details>
-
+<!-- CONTACT -->
+<section class="sec contact-sec" id="contact">
+  <h2 class="sec-h sr"><span class="en">Contact</span><span class="ja">お問い合わせ</span></h2>
+  <div class="bar sr"></div>
+  <p class="contact-lede sr">お仕事のご依頼・ご相談はお気軽にご連絡ください。通常1〜2営業日以内にご返信いたします。</p>
+  <!-- action の YOUR_EMAIL_HERE を実際のメールアドレスに変更してください -->
+  <form class="contact-form sr" action="https://api.staticforms.xyz/submit" method="POST" aria-label="お問い合わせフォーム">
+    <input type="hidden" name="accessKey" value="sf_48lm2d52n690beehd67h5h67">
+    <input type="hidden" name="redirectTo" value="https://miraqlstudio.com/thanks.html">
+    <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+    <div class="form-row">
+      <label for="fc-company">会社名<span class="opt">（任意）</span></label>
+      <input type="text" id="fc-company" name="company" placeholder="例）株式会社○○">
     </div>
-  </section>
-  <footer class="site-footer" role="contentinfo" aria-label="フッター">
-    <div class="container">
-      <p class="copyright">© MIRAQLstudio Inc.</p>
+    <div class="form-row">
+      <label for="fc-name">お名前<span class="req">必須</span></label>
+      <input type="text" id="fc-name" name="name" placeholder="例）ミラクル　イチロウ" required>
     </div>
-  </footer>
-</main>
+    <div class="form-row">
+      <label for="fc-email">メールアドレス<span class="req">必須</span></label>
+      <input type="email" id="fc-email" name="email" placeholder="例）you@example.com" required>
+    </div>
+    <div class="form-row">
+      <label for="fc-msg">お問い合わせ内容<span class="req">必須</span></label>
+      <textarea id="fc-msg" name="message" placeholder="ご用件をご入力ください" required></textarea>
+    </div>
+    <button type="submit" class="btn-send">送信する</button>
+    <p class="form-policy">当サイトでは、ユーザーの個人情報を適切に取り扱い、第三者に提供することはありません。本ポリシーの内容は、法令等の変更により改定されることがあります。</p>
+  </form>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <h2 class="sec-h sr"><span class="en">FAQ</span><span class="ja">よくある質問</span></h2>
+  <div class="bar sr"></div>
+  <div class="faq-wrap" role="list">
+    <div class="faq-item sr" role="listitem">
+      <button class="faq-q" aria-expanded="false">どんな依頼に対応できますか？<span class="faq-ico" aria-hidden="true"></span></button>
+      <div class="faq-a" role="region"><div class="faq-a-in">
+        <strong>ゲーム・デジタルコンテンツの企画制作</strong><br>企画提案、企画書作成代行など、目的に応じたプランニングを行います。<br><br>
+        <strong>ゲーム・デジタルコンテンツの開発進行</strong><br>チーム組成、開発進行支援など、開発体制の構築と管理をサポートします。<br><br>
+        <strong>IP開発</strong><br>世界観構築やキャラクターデザイン、設定のご提案、メディアミックス展開を含めたご提案等に対応します。<br><br>
+        <strong>俳優・声優のマネジメント</strong><br>出演・キャスティング・演技指導等、表現者の活動支援を行います。<br><br>
+        <strong>バーチャルタレントのプロデュース</strong><br>キャラクター制作から配信環境のセットアップまで、トータルに対応します。
+      </div></div>
+    </div>
+    <div class="faq-item sr" role="listitem">
+      <button class="faq-q" aria-expanded="false">予算の目安はありますか？<span class="faq-ico" aria-hidden="true"></span></button>
+      <div class="faq-a" role="region"><div class="faq-a-in">1名稼働であれば数十万円規模からご相談可能です。数百万単位の小中規模から億単位の大規模開発プロジェクトのチーム組成にも対応可能です。</div></div>
+    </div>
+    <div class="faq-item sr" role="listitem">
+      <button class="faq-q" aria-expanded="false">ゲーム業界以外の案件でも対応できますか？<span class="faq-ico" aria-hidden="true"></span></button>
+      <div class="faq-a" role="region"><div class="faq-a-in">はい、可能です。ゲーミフィケーションを活用した企画提案や、異業種向けのデジタル体験設計も承っております。</div></div>
+    </div>
+    <div class="faq-item sr" role="listitem">
+      <button class="faq-q" aria-expanded="false">アイデアが固まっていなくても相談できますか？<span class="faq-ico" aria-hidden="true"></span></button>
+      <div class="faq-a" role="region"><div class="faq-a-in">もちろん大丈夫です。コンセプト立案や方向性の整理など、アイデア段階から一緒に形にしていきます。</div></div>
+    </div>
+    <div class="faq-item sr" role="listitem">
+      <button class="faq-q" aria-expanded="false">返信までの目安を教えてください<span class="faq-ico" aria-hidden="true"></span></button>
+      <div class="faq-a" role="region"><div class="faq-a-in">通常1〜2営業日以内にご連絡いたします。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- HP_logo_white.webp  透過・白字  推奨520×144px -->
+<footer>
+  <div class="footer-logo">
+    <img src="HP_logo_white.webp" alt="MIRAQLstudio"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="footer-logo-fb">MIRAQLstudio</span>
+  </div>
+  <span class="footer-copy">© MIRAQLstudio Inc.</span>
+  <div class="footer-sns" aria-label="公式SNS">
+    <a href="https://x.com/MIRAQLstudio" target="_blank" rel="noopener" aria-label="X(Twitter)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.91-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <span class="dim" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M17.5 2h-11C5.12 2 4 3.12 4 4.5v15C4 20.88 5.12 22 6.5 22h11c1.38 0 2.5-1.12 2.5-2.5v-15C20 3.12 18.88 2 17.5 2zM8 7h8v1.5H8V7zm0 4h8v1.5H8V11zm0 4h5v1.5H8V15z"/></svg>
+    </span>
+    <a href="https://www.linkedin.com/in/%E5%8B%89-%E5%B9%B3%E8%B3%80-16491b391/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+  </div>
+</footer>
+
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.querySelector('.menu-toggle');
-    const header = document.querySelector('.site-header');
-    
-    if (toggleButton && header) {
-      toggleButton.addEventListener('click', () => {
-        const isOpen = header.classList.contains('is-open');
-        header.classList.toggle('is-open');
-        toggleButton.setAttribute('aria-expanded', !isOpen);
-        // メニュー開閉時にbodyのスクロールを制御する場合 (任意)
-        // document.body.style.overflow = isOpen ? '' : 'hidden'; 
-      });
+/* ── HERO AURA PARTICLE ── */
+const canvas = document.getElementById('heroCanvas');
+const hero   = canvas.parentElement;
+function rsz(){ canvas.width = hero.offsetWidth; canvas.height = hero.offsetHeight; }
+rsz();
+const ctx = canvas.getContext('2d');
+const CX = () => canvas.width  * 0.75;
+const CY = () => canvas.height * 0.52;
 
-      // ナビゲーションリンクをクリックした際にメニューを閉じる処理 (ページ内リンク移動時)
-      const navLinks = document.querySelectorAll('.site-header .nav a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          if (header.classList.contains('is-open')) {
-            header.classList.remove('is-open');
-            toggleButton.setAttribute('aria-expanded', false);
-          }
-        });
-      });
+const rays = Array.from({length:52},(_,i)=>({
+  angle:(Math.PI*2/52)*i,
+  speed:Math.random()*.35+.12,
+  len:  Math.random()*110+50,
+  r:    Math.random()*30,
+  alpha:Math.random()*.09+.03,
+  grow: Math.random()*.7+.25,
+  maxR: Math.random()*canvas.width*.6+canvas.width*.05,
+  warm: Math.random()>.45,
+}));
+
+const orbs = Array.from({length:48},()=>{
+  const tier=Math.random();
+  const isL=tier>.85, isM=tier>.62&&!isL;
+  const size=isL?Math.random()*12+9:isM?Math.random()*5+3.5:Math.random()*2+.7;
+  const ba  =isL?Math.random()*.13+.05:isM?Math.random()*.35+.15:Math.random()*.55+.2;
+  return {angle:Math.random()*Math.PI*2,r:Math.random()*90+10,
+    speed:(Math.random()-.5)*.008,drift:-(Math.random()*.5+.12),
+    size,alpha:ba,fadeDir:Math.random()>.5?1:-1,warm:Math.random()>.42,
+    pulse:isL?Math.random()*Math.PI*2:-1,pulseSpd:Math.random()*.03+.015,isL,isM};
+});
+
+let t=0;
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const cx=CX(),cy=CY(); t+=.012;
+  const g1=ctx.createRadialGradient(cx,cy,0,cx,cy,canvas.width*.52);
+  g1.addColorStop(0,'rgba(255,252,220,.12)');g1.addColorStop(.25,'rgba(255,245,180,.05)');
+  g1.addColorStop(.6,'rgba(180,225,255,.025)');g1.addColorStop(1,'rgba(0,0,0,0)');
+  ctx.fillStyle=g1;ctx.fillRect(0,0,canvas.width,canvas.height);
+
+  rays.forEach(ray=>{
+    ray.r+=ray.grow;
+    if(ray.r>ray.maxR){ray.r=0;ray.alpha=Math.random()*.09+.03;ray.len=Math.random()*110+50;}
+    const ang=ray.angle+t*ray.speed*.05;
+    const x1=cx+Math.cos(ang)*ray.r,y1=cy+Math.sin(ang)*ray.r;
+    const x2=cx+Math.cos(ang)*(ray.r+ray.len),y2=cy+Math.sin(ang)*(ray.r+ray.len);
+    const lg=ctx.createLinearGradient(x1,y1,x2,y2);
+    lg.addColorStop(0,ray.warm?`rgba(255,242,168,${ray.alpha})`:`rgba(255,255,255,${ray.alpha})`);
+    lg.addColorStop(1,'rgba(255,255,255,0)');
+    ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);
+    ctx.strokeStyle=lg;ctx.lineWidth=Math.random()*1.2+.25;ctx.stroke();
+  });
+
+  orbs.forEach(s=>{
+    s.angle+=s.speed+Math.sin(t*.55)*.002;s.r-=s.drift*.22;
+    s.alpha+=s.fadeDir*(s.isL?.002:.004);
+    const maxA=s.isL?.18:s.isM?.55:.75, minA=s.isL?.03:.06;
+    if(s.alpha>maxA||s.alpha<minA)s.fadeDir*=-1;
+    if(s.r<6||s.r>canvas.width*.58)s.r=Math.random()*90+10;
+    const sx=cx+Math.cos(s.angle)*s.r,sy=cy+Math.sin(s.angle)*s.r;
+    let ds=s.size;
+    if(s.pulse>=0){s.pulse+=s.pulseSpd;ds=s.size*(1+Math.sin(s.pulse)*.22);}
+    const col =s.warm?`rgba(255,240,155,${s.alpha})`:`rgba(255,255,255,${s.alpha})`;
+    const col0=s.warm?`rgba(255,248,185,${s.alpha})`:`rgba(255,255,255,${s.alpha})`;
+    if(ds>3.5){
+      const gr=ctx.createRadialGradient(sx,sy,0,sx,sy,ds*(s.isL?2.8:2.2));
+      gr.addColorStop(0,col0);gr.addColorStop(.45,col);gr.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.beginPath();ctx.arc(sx,sy,ds*(s.isL?2.8:2.2),0,Math.PI*2);ctx.fillStyle=gr;ctx.fill();
+    }
+    ctx.beginPath();ctx.arc(sx,sy,ds,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();
+    if(ds>3){
+      const arm=ds*(s.isL?2.8:3.0);
+      const cl=s.warm?`rgba(255,240,155,${s.alpha*.45})`:`rgba(255,255,255,${s.alpha*.45})`;
+      ctx.beginPath();ctx.moveTo(sx-arm,sy);ctx.lineTo(sx+arm,sy);ctx.moveTo(sx,sy-arm);ctx.lineTo(sx,sy+arm);
+      ctx.strokeStyle=cl;ctx.lineWidth=.65;ctx.stroke();
     }
   });
+  requestAnimationFrame(draw);
+}
+draw();
+window.addEventListener('resize',rsz);
+
+/* ── NAV ── */
+const ham=document.getElementById('navHam');
+const nav=document.getElementById('navLinks');
+ham.addEventListener('click',()=>{
+  const o=nav.classList.toggle('open');
+  ham.setAttribute('aria-expanded',o);
+});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  nav.classList.remove('open');ham.setAttribute('aria-expanded','false');
+}));
+
+/* ── FAQ ── */
+document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{
+  const item=btn.closest('.faq-item');
+  const o=item.classList.toggle('open');
+  btn.setAttribute('aria-expanded',o);
+}));
+
+/* ── SCROLL REVEAL ── */
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
+},{threshold:.08});
+document.querySelectorAll('.sr,.sl').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
