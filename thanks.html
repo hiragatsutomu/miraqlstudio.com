@@ -1,28 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>お問い合わせを受け付けました | MIRAQLstudio Inc.</title>
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#0280CA">
-  <link rel="icon" href="HP_favicon.ico">
-  <style>
-    body{margin:0;font-family:ui-sans-serif,-apple-system,Segoe UI,Roboto,'Noto Sans JP',Helvetica,Arial}
-    .wrap{min-height:100dvh;display:grid;place-items:center;background:#F7FAFD;color:#1A1F27}
-    .card{background:#fff;border:1px solid rgba(2,6,23,.08);border-radius:16px;padding:28px 24px;box-shadow:0 12px 28px rgba(2,6,23,.08);text-align:center;width:min(720px,92%)}
-    h1{font-size:clamp(22px,2.5vw,28px);margin:0 0 8px}
-    p{margin:0 0 16px;color:#526072}
-    a.btn{display:inline-block;margin-top:8px;padding:12px 16px;border-radius:10px;background:linear-gradient(180deg,#0280CA,#1c6fb0);color:#fff;border:1px solid #1a6aa8;text-decoration:none}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>送信完了 | MIRAQLstudio Inc.</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+    background: #f5f7fa;
+    color: #1a1f27;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+  nav {
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid #e8ecf0;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+  }
+  nav a {
+    font-size: 15px;
+    font-weight: 800;
+    color: #0280CA;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+  nav img { height: 30px; width: auto; }
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5%;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid #e8ecf0;
+    padding: 56px 48px;
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+  }
+  .icon {
+    width: 64px;
+    height: 64px;
+    background: #e6f3fb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+  }
+  .icon svg { width: 32px; height: 32px; stroke: #0280CA; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  h1 { font-size: 22px; font-weight: 700; color: #1a1f27; margin-bottom: 12px; }
+  p { font-size: 15px; color: #3d4450; line-height: 1.8; margin-bottom: 32px; }
+  .btn {
+    display: inline-block;
+    background: #0280CA;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn:hover { background: #015f97; }
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: #9aa3ad;
+  }
+  @media (max-width: 480px) {
+    .card { padding: 40px 24px; }
+  }
+</style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card" aria-labelledby="t">
-      <h1 id="t">お問い合わせありがとうございます</h1>
-      <p>内容を確認のうえ担当よりご連絡します</p>
-      <a class="btn" href="/">トップへ戻る</a>
-    </section>
-  </main>
+<nav>
+  <a href="/">
+    <img src="HP_logo.webp" alt="MIRAQLstudio" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+    <span style="display:none;">MIRAQLstudio</span>
+  </a>
+</nav>
+<main>
+  <div class="card">
+    <div class="icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h1>送信が完了しました</h1>
+    <p>お問い合わせいただきありがとうございます。<br>通常1〜2営業日以内にご連絡いたします。</p>
+    <a href="/" class="btn">トップページへ戻る</a>
+  </div>
+</main>
+<footer>© MIRAQLstudio Inc.</footer>
 </body>
 </html>
