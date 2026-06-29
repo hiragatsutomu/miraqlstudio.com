@@ -185,22 +185,25 @@ nav{
 
 /* ── ABOUT ── */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:center;}
-.about-text p{font-size:15px;color:var(--ink-mid);line-height:1.95;margin-bottom:14px;}
+.about-text p{font-size:clamp(15px,1.6vw,18px);color:var(--ink-mid);line-height:1.95;margin-bottom:14px;}
 .about-text p:last-child{margin-bottom:0;}
 .about-img{aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--surface);position:relative;}
 .about-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
 .about-img:hover img{transform:scale(1.03);}
 .about-img::before{
   content:'';position:absolute;inset:0;z-index:1;border-radius:6px;
-  background:linear-gradient(135deg,rgba(2,128,202,.35) 0%,transparent 45%,rgba(64,196,255,.22) 100%);
-  animation:wave-blue 3s ease-in-out infinite;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 65% 20%,rgba(168,218,255,.45) 0%,transparent 50%),
+    linear-gradient(180deg,rgba(2,128,202,.25) 0%,transparent 60%);
+  animation:dragon-aura 3s ease-in-out infinite;pointer-events:none;
 }
 .about-img::after{
   content:'';position:absolute;inset:0;z-index:2;border-radius:6px;
-  background:radial-gradient(ellipse at 70% 30%,rgba(168,218,255,.2) 0%,transparent 55%);
-  animation:wave-blue 3s ease-in-out infinite reverse;pointer-events:none;
+  background:radial-gradient(ellipse at 30% 70%,rgba(64,196,255,.2) 0%,transparent 55%);
+  animation:dragon-aura 3s ease-in-out infinite reverse;pointer-events:none;
 }
-@keyframes wave-blue{0%,100%{opacity:.4;}50%{opacity:1;}}
+@keyframes dragon-aura{0%,100%{opacity:.35;}50%{opacity:.85;}}
+.about-canvas{position:absolute;inset:0;z-index:3;border-radius:6px;pointer-events:none;}
 
 /* ── STRATEGY ── */
 .strat-sec{background:var(--surface);}
@@ -225,17 +228,21 @@ nav{
 .founder-img:hover img{transform:scale(1.03);}
 .founder-img::before{
   content:'';position:absolute;inset:0;z-index:1;border-radius:6px;
-  background:radial-gradient(ellipse at 55% 15%,rgba(255,220,100,.22) 0%,transparent 55%),
-             linear-gradient(180deg,transparent 40%,rgba(2,128,202,.18) 100%);
-  animation:stage-glow 3.5s ease-in-out infinite;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(255,220,255,.5) 0%,transparent 55%),
+    radial-gradient(ellipse at 50% 10%,rgba(200,160,255,.35) 0%,transparent 45%);
+  animation:theater-glow 3s ease-in-out infinite;pointer-events:none;
 }
 .founder-img::after{
   content:'';position:absolute;inset:0;z-index:2;border-radius:6px;
-  background:radial-gradient(ellipse at 60% 20%,rgba(255,220,100,0.18) 0%,transparent 65%),
-             linear-gradient(180deg,transparent 40%,rgba(2,128,202,0.15) 100%);
-  animation:stage-glow 3.5s ease-in-out infinite;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 30% 50%,rgba(255,200,80,.15) 0%,transparent 45%),
+    radial-gradient(ellipse at 70% 50%,rgba(120,80,255,.15) 0%,transparent 45%),
+    linear-gradient(180deg,transparent 50%,rgba(80,40,180,.2) 100%);
+  animation:theater-glow 3s ease-in-out infinite reverse;pointer-events:none;
 }
-@keyframes stage-glow{0%,100%{opacity:.7;}50%{opacity:1;}}
+@keyframes theater-glow{0%,100%{opacity:.5;}50%{opacity:1;}}
+.founder-canvas{position:absolute;inset:0;z-index:3;border-radius:6px;pointer-events:none;}
 .founder-name{font-size:clamp(18px,2.5vw,22px);font-weight:800;color:var(--ink);margin-bottom:4px;}
 .founder-role{font-size:13px;color:var(--blue);font-weight:500;line-height:1.6;margin-bottom:24px;}
 .founder-bio{font-size:clamp(13px,1.6vw,15px);color:var(--ink-mid);line-height:1.95;margin-bottom:14px;}
@@ -411,6 +418,7 @@ footer{background:#0d2137;padding:24px var(--pad);display:flex;align-items:cente
     <div class="about-img sr">
       <img src="HP_about.webp" alt="MIRAQLstudio"
         onerror="this.style.display='none'">
+      <canvas class="about-canvas" id="aboutCanvas"></canvas>
     </div>
   </div>
 </section>
@@ -490,6 +498,7 @@ footer{background:#0d2137;padding:24px var(--pad);display:flex;align-items:cente
     <div class="founder-img sr">
       <img src="HP_founder.webp" alt="代表 平賀勉"
         onerror="this.style.display='none'">
+      <canvas class="founder-canvas" id="founderCanvas"></canvas>
     </div>
   </div>
 </section>
@@ -778,6 +787,153 @@ const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
 },{threshold:.08});
 document.querySelectorAll('.sr,.sl').forEach(el=>io.observe(el));
+</script>
+
+<script>
+/* ── About: 奇跡のオーラ光の粒（青×白）が降り注ぐ ── */
+(function(){
+  const canvas = document.getElementById('aboutCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const particles = [];
+  const COUNT = window.innerWidth < 600 ? 30 : 60;
+
+  function resize(){
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const COLORS = [
+    'rgba(168,218,255,',
+    'rgba(255,255,255,',
+    'rgba(64,196,255,',
+    'rgba(120,200,255,'
+  ];
+
+  for(let i=0;i<COUNT;i++){
+    particles.push({
+      x: Math.random(),
+      y: Math.random(),
+      size: Math.random()*2.5+0.5,
+      speed: Math.random()*0.0008+0.0003,
+      opacity: Math.random()*0.7+0.2,
+      color: COLORS[Math.floor(Math.random()*COLORS.length)],
+      twinkle: Math.random()*Math.PI*2,
+      twinkleSpeed: Math.random()*0.04+0.01,
+      drift: (Math.random()-0.5)*0.0003
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    const W=canvas.width, H=canvas.height;
+    particles.forEach(p=>{
+      p.y -= p.speed;
+      p.x += p.drift;
+      p.twinkle += p.twinkleSpeed;
+      if(p.y < -0.05) p.y = 1.05;
+      if(p.x < -0.05) p.x = 1.05;
+      if(p.x > 1.05) p.x = -0.05;
+      const alpha = p.opacity * (0.5 + 0.5*Math.sin(p.twinkle));
+      ctx.beginPath();
+      ctx.arc(p.x*W, p.y*H, p.size, 0, Math.PI*2);
+      ctx.fillStyle = p.color + alpha + ')';
+      ctx.fill();
+      // 光の滲み
+      if(p.size > 1.5){
+        ctx.beginPath();
+        ctx.arc(p.x*W, p.y*H, p.size*2.5, 0, Math.PI*2);
+        ctx.fillStyle = p.color + (alpha*0.15) + ')';
+        ctx.fill();
+      }
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── Founder: 奇跡の輝き（金×紫×白）が劇場を包む ── */
+(function(){
+  const canvas = document.getElementById('founderCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const particles = [];
+  const COUNT = window.innerWidth < 600 ? 35 : 70;
+
+  function resize(){
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const COLORS = [
+    'rgba(255,220,120,',
+    'rgba(200,160,255,',
+    'rgba(255,255,255,',
+    'rgba(160,120,255,',
+    'rgba(255,240,180,'
+  ];
+
+  for(let i=0;i<COUNT;i++){
+    const fromTop = Math.random() < 0.5;
+    particles.push({
+      x: Math.random(),
+      y: fromTop ? Math.random()*0.3 : Math.random(),
+      size: Math.random()*2.2+0.4,
+      speed: Math.random()*0.0006+0.0002,
+      opacity: Math.random()*0.75+0.15,
+      color: COLORS[Math.floor(Math.random()*COLORS.length)],
+      twinkle: Math.random()*Math.PI*2,
+      twinkleSpeed: Math.random()*0.05+0.015,
+      drift: (Math.random()-0.5)*0.0002,
+      // スポットライト風：上から降る粒も混ぜる
+      falling: fromTop
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    const W=canvas.width, H=canvas.height;
+
+    // スポットライト光線（上から中央へ）
+    const grad = ctx.createRadialGradient(W*0.5, 0, 0, W*0.5, 0, H*0.7);
+    grad.addColorStop(0, 'rgba(255,240,200,0.12)');
+    grad.addColorStop(0.4, 'rgba(200,160,255,0.06)');
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    particles.forEach(p=>{
+      if(p.falling){
+        p.y += p.speed * 1.2;
+        if(p.y > 1.05) p.y = -0.05;
+      } else {
+        p.y -= p.speed * 0.5;
+        if(p.y < -0.05) p.y = 1.05;
+      }
+      p.x += p.drift;
+      p.twinkle += p.twinkleSpeed;
+      if(p.x < -0.05) p.x = 1.05;
+      if(p.x > 1.05) p.x = -0.05;
+      const alpha = p.opacity * (0.4 + 0.6*Math.sin(p.twinkle));
+      ctx.beginPath();
+      ctx.arc(p.x*W, p.y*H, p.size, 0, Math.PI*2);
+      ctx.fillStyle = p.color + alpha + ')';
+      ctx.fill();
+      if(p.size > 1.2){
+        ctx.beginPath();
+        ctx.arc(p.x*W, p.y*H, p.size*3, 0, Math.PI*2);
+        ctx.fillStyle = p.color + (alpha*0.12) + ')';
+        ctx.fill();
+      }
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
 </script>
 </body>
 </html>
